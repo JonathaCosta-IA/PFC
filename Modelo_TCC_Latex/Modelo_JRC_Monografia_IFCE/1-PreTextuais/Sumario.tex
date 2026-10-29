@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Lista de figuras, lista de Tabelas, Lista de Símbolos e Sumário %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%====================================================================
+% LISTA DE ILUSTRAÇÃO
+\pdfbookmark[0]{\listfigurename}{lof}
+
+%\renewcommand\listfigurename{\normalsize \textbf{LISTA DE FIGURAS}}
+%\renewcommand*{\cftfigurename}{Figure\space} % Essa é a linha de código que irá modificar o nome de Figura para Figure. ;)
+
+\listoffigures*
+\cleardoublepage
+%====================================================================
+
+%====================================================================
+% LISTA DE TABELAS
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+%====================================================================
+
+
+%====================================================================
+% LISTA DE SIGLAS
+\begin{siglas}
+\item[IFCE] Instituto Federal de Ciência, Tecnologia e Educação do Ceará
+\item[UECE] Universidade Estadual do Ceará
+\item[UFC] Universidade Federal do Ceará
+\end{siglas}
+\cleardoublepage
+%====================================================================
+
+
+%====================================================================
+% lISTA DE SÍMBOLOS
+\begin{simbolos}
+  \item[$ \alpha $] Letra grega Alfa
+  \item[$ \beta $] Letra grega Beta
+  \item[$ \Gamma $] Letra grega Gama
+  \item[$ \Lambda $] Lambda
+  \item[$ \zeta $] Letra grega minúscula zeta
+  \item[$ \in $] Pertence
+\end{simbolos}
+%====================================================================
+
+%====================================================================
+% SUMÁRIO
+%\pdfbookmark[0]{\contentsname}{toc}
+\renewcommand{\tocheadstart}{\ABNTEXchapterfont}
+\tableofcontents*
+%\cleardoublepage
+%====================================================================

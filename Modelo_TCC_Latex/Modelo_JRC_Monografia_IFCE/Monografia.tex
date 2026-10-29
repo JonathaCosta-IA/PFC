@@ -1,0 +1,170 @@
+%--------------------------------------------------------------------
+% -------------------------------------------------------------------
+% TRABALHO DE CONCLUSÃO DE CURSO.
+% OTIMIZAÇÕES: Prof. Jonatha Costa
+% AUTOR: JOHN DAYTON CHAVES CUSTÓDIO
+% -------------------------------------------------------------------
+% -------------------------------------------------------------------
+% INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TNOLOGIA DO CEARÁ - IFCE
+% Departamento de Indústria
+% Campus Fortaleza
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Modelo de Monografia %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%====================================================================
+%================== Definição do documento ==========================
+%====================================================================
+% \documentclass[conference,harvard,brazil,english]{sbatex}
+ \documentclass[
+ 	a4paper,	% Formato do papel utilizado no trabalho.
+ 	12pt,		% Tamanho da letra utilizada.
+ 	oneside,	% Para utilização apenas de um lado da folha. Caso contrario twoside. oneside
+    chapter=TITLE,	% Títulos em caixa alta.
+ 	brazil,		% Idioma padrão do trabalho.
+	sumario=abnt-6027-2012  % Formata o sumário conforme as recomendações da ABNT NBR 6027:2012
+ 	]{abntex2}	% Indicação da utilização do capote abntex2.
+
+%====================================================================
+%======================== Pacotes Básicos ===========================
+%====================================================================
+\usepackage{lmodern}		% Utilização da fonte Latin Modern.
+\usepackage[T1]{fontenc}	% Seleção de códigos de fonte.
+\usepackage[utf8]{inputenc}	% Para a utilização dos acentos na língua Portuguesa.
+\usepackage{indentfirst}	% Identação do primeiro paragrafo de cada seção
+%\usepackage{nomencl}		
+\usepackage{color}			% Pacote de utilização das cores.
+\usepackage{graphicx}		% Pacote para utilização dos gráficos.
+\usepackage{microtype}		% Pacote de melhorias de justificação
+\usepackage{mathptmx}		% Pacote para incluir a fonte Times New Roman
+\usepackage[small]{caption} % Instrução para reduzir a fonte do pacote caption
+\usepackage{setspace}		% Permitir o ajusto entre linhas
+
+%====================================================================
+%========= Pacotes adicionais, usados apenas para abntx2 ============
+%====================================================================
+%--------------------------------------------------------------------
+% Caso o software LaTeX não separre de forma correta a palavra, pode ser feito manualmente, como a seguir.
+\hyphenation{com-pu-ta-dor}		% Separação correta da palavra.
+\hyphenation{in-fan-tô-me-tro}
+% -------------------------------------------------------------------
+
+
+%====================================================================
+%======================= Pacotes de citações ========================
+%====================================================================
+%\usepackage[brazilian,hyperpageref]{backref}	% Para páginas com as citações no arquivo bibl
+\usepackage[alf,
+abnt-full-initials=no,
+abnt-emphasize=bf,								% Modificação para texto em negrito.
+abnt-and-type=e,
+abnt-url-package=url,
+abnt-repeated-author-omit=yes]{abntex2cite}		% Citações padrão ABNT
+
+
+
+%====================================================================
+%========== Espaçamentos entre linhas, parágrafos e margens =========
+%====================================================================
+% Alterando as margens padrões:
+\setlrmarginsandblock{3cm}{2cm}{*}
+\setulmarginsandblock{3cm}{2cm}{*}
+\checkandfixthelayout
+
+% Define o tamanho do parágrafo:
+\setlength{\parindent}{0mm}		% Define parágrafo de 0cm
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0mm}
+
+% Espaçamento Simples
+%\SingleSpace
+
+
+\begin{document}
+
+% Numeração em romanos para páginas iniciais (capa, agradecimentos, etc)
+%\pagestyle{empty}
+%\pagenumbering{roman}
+
+% -------------------------------------------------------------------
+% Determinando as Fontes do documento para os títulos, subtítulos e partes.
+% -------------------------------------------------------------------
+\renewcommand{\ABNTEXchapterfont}{\fontseries{b}\selectfont}	% Modificar letra do capítulo para negrito
+\renewcommand{\ABNTEXchapterfontsize}{\normalsize} 	% Modifica o tamanho da fonte para os capítulos
+
+\renewcommand{\ABNTEXsectionfontsize}{\normalsize} 	% Modifica o tamanho da fonte da seção para normal (12tp)
+
+\renewcommand{\ABNTEXsubsectionfont}{\fontseries{b}\fontshape{it}\selectfont}	% Modificar letra da subseção para negrito em itálico
+\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize} 	% Modifica o tamanho da fonte da subseção para normal
+
+\renewcommand{\ABNTEXsubsubsectionfont}{\fontshape{it}\selectfont}	% Modificar letra da subsubseção para itálico
+
+\renewcommand{\ABNTEXsubsubsubsectionfont}{\fontfamily{u}\fontshape{it}\selectfont}	% Modificar letra da subsubsubseção para itálico
+%--------------------------------------------------------------------
+
+% Páginas iniciais
+
+\include{1-PreTextuais/Capa}
+\include{1-PreTextuais/Folha_de_Rosto}
+
+% Inicio de numeração das páginas. Centralizado e embaixo.
+%\pagestyle{plain}
+\pagenumbering{arabic}	% Inicia a numeração normal
+\pagestyle{empty}		% Não permite a visualização da numeração
+
+\include{1-PreTextuais/Folha_de_Aprovacao}
+
+% Inicio de espaçamento de 1,5
+\OnehalfSpace
+
+\include{1-PreTextuais/Dedicatoria}
+\include{1-PreTextuais/Folha_de_Agradecimentos}
+\include{1-PreTextuais/Epigrafe}
+
+% ------------------------------------------------------------------- 
+% Espaçamentos entre linhas e parágrafos 
+% -------------------------------------------------------------------
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.25cm}
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+%--------------------------------------------------------------------
+
+\include{1-PreTextuais/Resumo}
+\include{1-PreTextuais/Abstract}
+
+\include{1-PreTextuais/Sumario}
+
+\SingleSpace
+\textual
+%\pagestyle{myheadings}		% Permite a visualização da numeração das páginas.
+%\pagestyle{headings}		% Permite a visualização da numeração das páginas.
+%\pagestyle{plain}
+
+\textcolor{blue}{
+\include{2-Textuais/ConsideracoesJRC}
+}
+\include{2-Textuais/Introducao}
+\include{2-Textuais/EstadoArte}
+\include{2-Textuais/FundamentacaoTeorica}
+\include{2-Textuais/Proposta}
+\include{2-Textuais/ResultadoseDiscussoes}
+\include{2-Textuais/Conclusao}
+\include{3-PosTextuais/GuiaReferencias}
+\include{3-PosTextuais/Apendices}
+\include{3-PosTextuais/Anexos}
+
+
+% Final de numeração das páginas.
+\pagestyle{empty}
+
+\bibliography{3-PosTextuais/Referencias.bib} \thispagestyle{empty}
+
+% Indicação de inicialização do apendice.
+\appendix
+
+%
+\include{3-PosTextuais/Apendice1}
+\include{3-PosTextuais/Anexo}
+
+\end{document}
